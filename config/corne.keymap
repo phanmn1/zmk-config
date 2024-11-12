@@ -15,7 +15,14 @@
         desktop_right: desktop_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RCTRL &kp RIGHT_GUI &kp RIGHT>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp RIGHT>;
+
             label = "DESKTOP_RIGHT";
         };
     };
@@ -33,6 +40,15 @@
             label = "CAPS_TAP_RIGHT";
             #binding-cells = <0>;
             bindings = <&kp RIGHT_SHIFT>, <&kp RIGHT_SHIFT>, <&kp CAPSLOCK>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        esc_combo {
+            bindings = <&kp ESCAPE>;
+            key-positions = <19 20>;
         };
     };
 
@@ -62,10 +78,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp F1  &trans  &trans          &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &desktop_right  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
-                        &trans          &trans  &mo 3     &trans    &trans    &trans
+&trans  &kp F1  &trans  &trans          &trans          &trans    &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &desktop_right  &desktop_right  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans          &trans          &trans    &trans    &trans    &trans  &trans     &trans  &trans
+                        &trans          &trans          &mo 3     &trans    &trans    &trans
             >;
         };
 
