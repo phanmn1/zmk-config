@@ -23,9 +23,31 @@
                 <&macro_press>,
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
-                <&kp RIGHT>;
+                <&kp RIGHT>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
 
             label = "DESKTOP_RIGHT";
+        };
+
+        desktop_left: desktop_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL>,
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp LEFT>,
+                <&macro_release>,
+                <&kp LCTRL>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
+
+            label = "DESKTOP_LEFT";
         };
     };
 
@@ -80,10 +102,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3          &kp F4          &kp F5    &kp F6    &kp F7    &kp F8  &kp F9     &kp F10  &trans
-&trans  &kp F11  &kp F12  &desktop_right  &desktop_right  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
-&trans  &trans   &trans   &trans          &trans          &trans    &trans    &trans    &trans  &trans     &trans   &trans
-                          &trans          &trans          &mo 3     &trans    &trans    &trans
+&trans  &kp F1   &kp F2   &kp F3         &kp F4          &kp F5    &kp F6    &kp F7    &kp F8  &kp F9     &kp F10  &trans
+&trans  &kp F11  &kp F12  &desktop_left  &desktop_right  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
+&trans  &trans   &trans   &trans         &trans          &trans    &trans    &trans    &trans  &trans     &trans   &trans
+                          &trans         &trans          &mo 3     &trans    &trans    &trans
             >;
         };
 
