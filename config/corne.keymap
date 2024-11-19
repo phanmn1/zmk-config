@@ -93,7 +93,7 @@
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3         &kp F4          &kp F5    &kp F6    &kp F7    &kp F8  &kp F9     &kp F10  &trans
 &trans  &kp F11  &kp F12  &desktop_left  &desktop_right  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans   &trans
-&trans  &trans   &trans   &trans         &trans          &trans    &trans    &trans    &trans  &trans     &trans   &rgb_ug RGB_TOG
+&trans  &trans   &trans   &trans         &trans          &trans    &trans    &trans    &trans  &trans     &trans   &trans
                           &trans         &trans          &mo 3     &trans    &trans    &trans
             >;
         };
@@ -115,10 +115,10 @@
 
         dual {
             bindings = <
-&trans          &ext_power EP_TOG  &trans        &trans        &trans        &ext_power EP_TOG    &ext_power EP_TOG  &trans           &trans           &trans  &trans  &trans
-&bt BT_CLR_ALL  &bt BT_SEL 0       &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4         &trans             &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans  &trans  &trans
-&bl BL_TOG      &trans             &trans        &bl BL_INC    &bl BL_DEC    &trans               &kp PERCENT        &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &trans  &trans  &rgb_ug RGB_TOG
-                                                 &trans        &trans        &trans               &trans             &trans           &trans
+&trans          &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans        &trans        &trans        &trans        &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                                            &trans        &trans        &trans          &trans  &trans  &trans
             >;
         };
     };
