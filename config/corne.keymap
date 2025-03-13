@@ -47,21 +47,17 @@
         };
     };
 
-    behaviors {
-        caps_tap: caps_tap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CAPS_TAP";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
         esc_combo {
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
+        };
+
+        caps_lock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <24 35>;
         };
     };
 
@@ -76,10 +72,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB       &kp Q  &kp W  &kp E             &kp R         &kp T          &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_ALT  &kp A  &kp S  &kp D             &kp F         &kp G          &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
-&caps_tap     &kp Z  &kp X  &kp C             &kp V         &kp B          &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &caps_tap
-                            &mt LCTRL ESCAPE  &kp LEFT_GUI  &lt 2 ENTER    &mo 1  &kp SPACE  &kp RALT
+&kp TAB         &kp Q  &kp W  &kp E             &kp R         &kp T          &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp LEFT_ALT    &kp A  &kp S  &kp D             &kp F         &kp G          &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C             &kp V         &kp B          &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                              &mt LCTRL ESCAPE  &kp LEFT_GUI  &lt 2 ENTER    &mo 1  &kp SPACE  &kp RALT
             >;
         };
 
