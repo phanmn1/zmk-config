@@ -54,11 +54,6 @@
             bindings = <&kp ESCAPE>;
             key-positions = <19 20>;
         };
-
-        caps_lock {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <24 35>;
-        };
     };
 
     behaviors {
