@@ -45,6 +45,26 @@
 
             label = "DESKTOP_LEFT";
         };
+
+        login: login {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RCTRL>,
+                <&macro_press>,
+                <&kp RIGHT_ALT>,
+                <&macro_press>,
+                <&kp DEL>,
+                <&macro_release>,
+                <&kp RCTRL>,
+                <&macro_release>,
+                <&kp RIGHT_ALT>,
+                <&macro_release>,
+                <&kp DEL>;
+
+            label = "LOGIN";
+        };
     };
 
     combos {
